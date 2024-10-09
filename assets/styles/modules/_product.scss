@@ -1,0 +1,138 @@
+.product {
+   min-width: 260px;
+   max-width: 260px;
+   background-color: var(--neutral_color_white);
+   position: relative;
+
+   &-img {
+      height: 253px;
+      overflow: hidden;
+
+      img {
+         transition: var(--transition-all-ease);
+
+         &:hover {
+            transform: scale(1.05);
+         }
+      }
+   }
+
+   &-box {
+      padding: 16px 20px;
+      border-top: 1px solid rgb(234, 234, 234);
+   }
+
+   &-level {
+      margin-bottom: 13px;
+
+      &__dots {
+         @include wh(6px);
+         border-radius: 50%;
+         background-color: rgb(200, 200, 200);
+
+         &+& {
+            margin-left: 4px
+         }
+
+         &.bg {
+            background-color: var(--primary_color_default);
+         }
+      }
+
+      &__text {
+         font: rem(12px) $Regular;
+         color: rgb(118, 118, 118);
+         margin-left: 9px
+      }
+   }
+
+   &-name {
+      font: rem(16px) $Bold;
+      color: var(--secondary_color_default);
+      line-height: 1.4;
+      margin-bottom: 24px;
+      transition: var(--transition-all-ease);
+
+      &:hover {
+         color: var(--primary_color_default)
+      }
+   }
+
+   &-price {
+      width: calc(100% - 98px);
+
+      &__old {
+         font: rem(12px) $Regular;
+         color: rgb(118, 118, 118);
+      }
+
+      &__through {
+         text-decoration: line-through
+      }
+
+      &__current {
+         font: rem(18px) $Bold;
+         color: var(--secondary_color_default)
+      }
+
+      &__sale {
+         font: rem(18px) $Bold;
+         color: var(--primary_color_default)
+      }
+   }
+
+
+   &-btn {
+      @include wh(98px, 33px);
+      font: rem(14px) $Regular;
+      color: var(--neutral_color_white);
+      background-color: var(--secondary_color_default);
+      transition: var(--transition-all-ease);
+
+      &:hover {
+         background-color: var(--primary_color_default)
+      }
+   }
+
+
+   &-tag {
+      @include wh(69px, 27px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 9;
+      font: rem(14px) $Regular;
+      color: var(--neutral_color_white);
+      clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+      text-transform: uppercase;
+      padding-left: 12px;
+   }
+
+   &-new {
+      background-color: var(--secondary_color_default);
+   }
+
+   &-sale {
+      background-color: var(--primary_color_default);
+   }
+
+   &-perecent {
+      background-color: var(--primary_color_default);
+
+   }
+
+   &-favorite {
+      @include wh(40px);
+      color: rgb(200, 200, 200);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 9;
+      transition: var(--transition-all-ease);
+
+      &:hover,
+      &.active {
+         color: var(--primary_color_default);
+      }
+   }
+}

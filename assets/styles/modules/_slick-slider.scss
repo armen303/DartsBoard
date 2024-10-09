@@ -1,0 +1,94 @@
+﻿.slick {
+    &-carousel {
+        position: relative;
+    }
+
+    &-list {
+        overflow: hidden;
+    }
+
+    &-track {
+        display: flex;
+        flex-wrap: nowrap;
+        cursor: default;
+    }
+
+    &-slide {
+        &+& {
+            margin-left: 20px;
+        }
+    }
+
+    &-vertical {
+        .slick-track {
+            display: block;
+        }
+    }
+}
+
+
+
+
+.slick {
+
+    //ARROWS
+    &-arrow {
+        position: absolute;
+        z-index: 9;
+    }
+
+    &-prev {
+        left: 0;
+    }
+
+    &-next {
+        right: 0;
+    }
+
+    &-disabled {
+        pointer-events: none;
+        cursor: default;
+        opacity: 0;
+    }
+
+    // DOTS
+    &-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 24px;
+
+        li {
+            @include wh(8px);
+            margin: 5px;
+
+            button {
+                @include wh(100%);
+                background-color: var();
+                border-radius: 50%;
+                font-size: 0;
+                color: transparent;
+                display: block;
+            }
+
+            &.slick-active {
+                @include wh(12px);
+
+                button {
+                    background-color: var();
+                }
+            }
+        }
+
+        &-counter {
+            font: rem(16px) $Regular;
+            position: absolute;
+            bottom: 0;
+
+            & *:not(.slick-active) {
+                display: none;
+            }
+        }
+    }
+}

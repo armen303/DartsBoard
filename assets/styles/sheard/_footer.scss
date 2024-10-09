@@ -1,0 +1,103 @@
+.footer {
+   padding-bottom: 100px;
+
+   @include sm {
+      padding-bottom: 30px
+   }
+
+
+
+   @include xs {
+      &-box {
+         text-align: center;
+         justify-content: center
+      }
+   }
+
+   &-logo {
+      @include wh(144px, 153px);
+   }
+
+   &-info {
+      max-width: 217px;
+      width: 100%;
+
+      @include xs {
+         max-width: 100%;
+         margin-top: 25px;
+      }
+
+      &__phone {
+         font: rem(20px) $Bold;
+         margin-bottom: 10px;
+      }
+
+      &__mail {
+         font: rem(16px) $Bold;
+      }
+
+      &__link {
+         color: var(--secondary_color_default);
+         display: block;
+         transition: var(--transition-all-ease);
+
+         &:hover {
+            color: var(--primary_color_default);
+         }
+      }
+   }
+
+   &-menu {
+      max-width: 167px;
+      width: 100%;
+
+      @include sm {
+         max-width: 350px;
+         margin-top: 25px;
+      }
+
+      &__link {
+         font: rem(16px) $Regular;
+         color: var(--secondary_color_default);
+         display: block;
+         transition: var(--transition-all-ease);
+
+         &:hover {
+            color: var(--primary_color_default);
+         }
+
+         &+& {
+            margin-top: 8px;
+         }
+
+      }
+   }
+
+   &-yandex {
+      @include wh(150px, 101px);
+
+      @include sm {
+         margin-top: 25px;
+      }
+   }
+
+   &-rights {
+      max-width: 280px;
+      width: 100%;
+
+      @include md {
+         max-width: 100%;
+         margin-top: 25px;
+      }
+
+      &__text {
+         font: rem(12px) $Regular;
+         color: rgb(21, 21, 21);
+         line-height: 1.2;
+
+         &+& {
+            margin-top: 5px;
+         }
+      }
+   }
+}

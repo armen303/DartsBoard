@@ -1,0 +1,28 @@
+[data-aos][data-aos][data-aos-delay="500"],
+body[data-aos-delay="500"] [data-aos] {
+   transition-delay: 0
+}
+
+[data-aos][data-aos][data-aos-duration="900"],
+body[data-aos-duration="900"] [data-aos] {
+   transition-duration: .9s
+}
+
+[data-aos][data-aos][data-aos-delay="500"].aos-animate,
+body[data-aos-delay="500"] [data-aos].aos-animate {
+   transition-delay: .5s
+}
+
+[data-aos^=fade][data-aos^=fade] {
+   opacity: 0;
+   transition-property: opacity, transform
+}
+
+[data-aos^=fade][data-aos^=fade].aos-animate {
+   opacity: 1;
+   transform: translateZ(0)
+}
+
+[data-aos=fade-left] {
+   transform: translate3d(900px, 0, 0)
+}

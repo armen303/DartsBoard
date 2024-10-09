@@ -1,0 +1,23 @@
+.line-clamp {
+   display: -webkit-box;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   /*! autoprefixer: off */
+   -webkit-box-orient: vertical;
+
+   /*! autoprefixer: off */
+
+   &_2 {
+      -webkit-line-clamp: 2;
+   }
+
+   &_3 {
+
+      -webkit-line-clamp: 3;
+   }
+
+   &_5 {
+
+      -webkit-line-clamp: 5;
+   }
+}

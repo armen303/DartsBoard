@@ -1,0 +1,28 @@
+@import // base & sections & modules 
+'./mixins',
+'./rem',
+'../fonts/Roboto/font',
+'./icons',
+'./normalize',
+'./flex-box',
+'./root',
+
+// modules
+'../modules/container',
+'../modules/cursor',
+'../modules/html',
+'../modules/line-clamp',
+'../modules/overflow',
+'../modules/slick-slider',
+'../modules/product',
+'../modules/arrow',
+'../modules/animation',
+'../modules/d-none',
+'../modules/d-block',
+
+// pages
+'../pages/home',
+
+// sheard
+'../sheard/header',
+'../sheard/footer';
